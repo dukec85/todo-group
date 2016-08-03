@@ -23,4 +23,12 @@ export default function() {
 
     http://www.ember-cli-mirage.com/docs/v0.2.x/shorthands/
   */
+  this.get('/todo-group');
+  this.get('/todo-groups');
+  this.post('/todo-group');
+  this.get('/todo-group/:id');
+  this.put('/todo-group/:id');
+  this.patch('/todo-group/:id');
+  this.del('/todo-group/:id');
+
 }

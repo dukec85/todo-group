@@ -1,5 +1,5 @@
 export default function(server) {
-  server.createList('user', 200);
+  server.createList('todo-group', 10);
 
 
   /*

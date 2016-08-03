@@ -1,3 +1,9 @@
-{{outlet}}
+<h1>Test Hello</h1>
 
-<h1>Test</h1>
+<div class="todo-list">
+  {{#each model as |value| }}
+    <div class="todo-list__item">
+      <div class="group-name"></div>
+    </div>
+  {{/each}}
+</div>
