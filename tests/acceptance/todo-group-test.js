@@ -18,9 +18,27 @@ test('visiting /todo-group shows a list', function(assert) {
   andThen(function() {
     findWithAssert('.todo-list');
     assert.equal(findWithAssert('.todo-list__item').length, 2,
-      'There should be some stuff.');
+      'There should be an element for each group from the API');
+
+      const firstGroupEl = findWithAssert('.group-name:first');
+    const firstGroup = server.db.groups.find(1);
+    assert.equal(firstGroupEl.text().trim(), `${firstGroup.firstName} ${firstGroup.lastName}`,
+      'The first group should be filled in');
+
   });
 });
+
+test('user can delete an existing group', function(assert) {
+  server.createList('group', 4);
+  visit('/groups');
+  click('.delete[data-id=2]');
+
+  andThen(function() {
+    assert.equal(find('.group-list__item').length, 3, 'The deleted item should not show in the list');
+    assert.equal(server.db.authors.find(2), null, 'The deleted group should be removed from the API');
+  });
+});
+
 
 test('user can navigate to add new todo from main list', function(assert) {
   visit('/todo-group');
