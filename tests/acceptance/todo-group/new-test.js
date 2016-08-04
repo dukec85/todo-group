@@ -7,10 +7,10 @@ test('visiting /todo-groups/new shows a new todo-group form', function(assert) {
   visit('/todo-groups/new');
 
   andThen(function() {
-    assert.equal(currentRouteName(), 'todo-group.new',
-      'The url /todo-groups/new loads the "todo-group.new" route.');
+    assert.equal(currentRouteName(), 'todo-groups.new',
+      'The url /todo-groups/new loads the "todo-groups.new" route.');
     assert.equal(currentURL(), '/todo-groups/new',
-      'The "todo-group.new" route does not redirect without user interaction');
+      'The "todo-groups.new" route does not redirect without user interaction');
       assert.equal(findWithAssert('.page-title').text().trim(),
         'New Category',
         'There is an element with a class "page-title" that says "New Category"');
@@ -33,7 +33,7 @@ test('user can submit the form on /todo-groups/new to create a new todo-group', 
   click('.submit');
 
   andThen(function() {
-    assert.equal(currentRouteName(), 'todo-group.index', 'After submit redirect to the "todo-group.index" route.');
+    assert.equal(currentRouteName(), 'todo-groups.index', 'After submit redirect to the "todo-groups.index" route.');
     assert.equal(currentURL(), '/todo-groups', 'After submit redirect to /todo-groups');
 
     assert.equal(findWithAssert('.collection__item').length, 1,
