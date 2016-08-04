@@ -9,7 +9,7 @@ Router.map(function() {
   this.route('todo-groups', function() {
     this.route('new');
 
-    this.route('edit');
+    this.route('edit', { path: '/:id/edit'});
   });
 });
 

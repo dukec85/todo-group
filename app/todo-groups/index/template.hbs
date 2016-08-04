@@ -1,33 +1,25 @@
-<div class="top-container">
-  <div class="top-container__inner">
-    <div class="hamburger">E</div>
-    <h2 class="top-title">Todos</h2>
-    <nav class="top-nav">
-      <nav class="top-nav__item active-page">todo 1</nav>
-      <nav class="top-nav__item">todo 2</nav>
-      <nav class="top-nav__item">todo 3</nav>
-      <nav class="top-nav__item new">New Todo!</nav>
-    </nav>
-  </div>
-</div>
-
-
-
-
 <div class="section">
   <div class="container">
     <div class="content">
       <h2 class="page-title">Categories</h2>
+      {{#link-to "todo-groups.new" class="new-btn" }}Add New Category{{/link-to}}
 
-      {{#link-to "todo-groups.new" class="new-link" }}Dynamic Operations Supervisor{{/link-to}}
-
-      {{#each model as |item|}}
-        <div class="collection__item">
-          <div class="todo-group__title">
-            {{item.title}}
+      <div class="todo-groups">
+        {{#each model as |todoGroup|}}
+          <div class="collection__item">
+            <div class="box">
+              <h4 class="todo-group__title">
+                {{todoGroup.title}}
+              </h4>
+            </div>
+            <div class="button-container">
+              <button class="button delete delete-btn" data-id="{{todo-groups.id}}" {{action "destroy" todoGroup}}><i class="fa fa-trash-o" aria-hidden="true"></i>
+              Delete</button>
+              {{#link-to "todo-groups.edit" todoGroup.id class="edit-btn"}}Edit{{/link-to}}
+            </div>
           </div>
-        </div>
-      {{/each}}
+        {{/each}}
+      </div>
     </div>
   </div>
 </div>
