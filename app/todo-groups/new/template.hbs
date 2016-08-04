@@ -4,7 +4,7 @@
       <h2 class="page-title">New Category</h2>
       <div class="collection__item">
         {{#simple-form onsubmit=(action "saveCategory") as |formValues|}}
-          {{input class="input title-input" value=formValues.text type="text" placeholder="Title"}}
+          {{input class="input title-input" value=formValues.title type="text" placeholder="Title"}}
           <button class="submit">Save</button>
         {{/simple-form}}
       </div>
