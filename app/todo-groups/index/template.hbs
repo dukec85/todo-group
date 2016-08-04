@@ -14,18 +14,22 @@
 
 
 
-<div class="middle-container">
-  <div class="middle-container__inner">
-<h3 class="group-title">Name of todo group</h3>
-<div class="card">
-{{#each model as |value|}}
+<div class="section">
+  <div class="container">
+    <div class="content">
+      <h2 class="page-title">Categories</h2>
 
-<div class="card__item">
-<input class="card__item-check"type="checkbox">
-<p>{{value.title}}</p>
+      {{#link-to "todo-groups.new" class="new-link" }}Dynamic Operations Supervisor{{/link-to}}
+
+      {{#each model as |item|}}
+        <div class="collection__item">
+          <div class="todo-group__title">
+            {{item.title}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
 </div>
 
-{{/each}}
-</div>
-</div>
-</div>
+{{outlet}}

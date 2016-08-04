@@ -9,7 +9,7 @@ test('user can see list of todo categories when visiting /todo-groups', function
 
   andThen(function() {
     assert.equal(currentURL(), '/todo-groups');
-    assert.equal(currentRouteName(), 'todo-group.index');
+    assert.equal(currentRouteName(), 'todo-groups.index');
 
     assert.equal(findWithAssert('.page-title').text().trim(),
       'Categories',
@@ -31,7 +31,7 @@ test('user can navigate to the new form from /todo-groups', function(assert) {
   click('.new-btn');
 
   andThen(function() {
-    assert.equal(currentRouteName(), 'todo-group.new',
+    assert.equal(currentRouteName(), 'todo-groups.new',
       'Clicking on an element with the class "new-btn" should redirect to the route "todo-group.new"');
     assert.equal(currentURL(), '/todo-groups/new',
       'Clicking on an element with the class "new-btn" should redirect to the URL "/todo-groups/new"');
@@ -43,7 +43,7 @@ test('user can navigate to the new form from /todo-groups', function(assert) {
   click('.new-btn');
 
   andThen(function() {
-    assert.equal(currentRouteName(), 'todo-group.new',
+    assert.equal(currentRouteName(), 'todo-groups.new',
       'Clicking on an element with the class "new-btn" should redirect to the route "todo-group.new"');
     assert.equal(currentURL(), '/todo-groups/new',
       'Clicking on an element with the class "new-btn" should redirect to the URL "/todo-groups/new"');
@@ -58,7 +58,7 @@ test('user can navigate to the edit form from /todo-groups', function(assert) {
 
 
   andThen(function() {
-    assert.equal(currentRouteName(), 'todo-group.edit',
+    assert.equal(currentRouteName(), 'todo-groups.edit',
       'Clicking on the third element with the class "edit-btn" should redirect to the route "todo-group.edit"');
     assert.equal(currentURL(), '/todo-groups/3/edit',
       'Clicking on the third element with the class "edit-btn" should redirect to the URL "/todo-groups/3/edit"');

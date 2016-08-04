@@ -1,7 +1,5 @@
-import { Factory, faker } from 'ember-cli-mirage';
+import DS from 'ember-data';
 
-export default Factory.extend({
-  title() {
-    return faker.name.title();
-  },
+export default DS.Model.extend({
+  title: DS.attr('string')
 });
