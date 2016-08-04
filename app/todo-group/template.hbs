@@ -1,9 +1,26 @@
-<h1>Test Hello</h1>
+<div class="section">
+  <div class="container">
+    <div class="content">
+      <h2 class="page-title">Your Todo List!</h2>
+      {{#link-to "todo-group.new" class="new-link" }}Add a Todo{{/link-to}}
 
-<div class="todo-list">
-  {{#each model as |value| }}
-    <div class="todo-list__item">
-      <div class="group-name"></div>
+      <div class="todo-list">
+        {{#each model as |todo-group|}}
+          <div class="todo-list__item">
+            <div class="box">
+              <p class="todo-name">
+                {{todo-group.verb}}
+              </p>
+            </div>
+            <div class="button-container">
+              <button class="button delete delete-todo" data-id="{{todo-group.id}}" {{action "destroy" todo-group}}>Delete</button>
+            {{#link-to "todo-group.detail" todo-group.id class="edit-todo"}}Edit{{/link-to}}
+            </div>
+          </div>
+        {{/each}}
+      </div>
     </div>
-  {{/each}}
+  </div>
 </div>
+
+{{outlet}}
