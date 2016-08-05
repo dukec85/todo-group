@@ -1,8 +1,11 @@
-<div class="section">
-  <div class="container">
-    <div class="content">
-      <h2 class="page-title">Categories</h2>
-      {{#link-to "todo-groups.new" class="new-btn" }}Add New Category{{/link-to}}
+<div class="app">
+  <div class="section">
+    <div class="container">
+      <div class="content">
+        <h2 class="page-title">Categories</h2>
+        {{#link-to "todo-groups.new" class="new-btn" }}Add New Category{{/link-to}}
+</div>
+
 
       <div class="todo-groups">
         {{#each model as |todoGroup|}}
