@@ -1,0 +1,7 @@
+{{#each model as |todoGroup|}}
+  {{#link-to "todo-groups" class="nav__item"}}{{todoGroup.title}}{{/link-to}}
+
+{{/each}}
+<div class="nav__item"></div>
+
+{{outlet}}
