@@ -8,15 +8,16 @@
 </div>
 
 <div class="box">
-  <input class="title-input" value= {{model.title}}>
+  {{#simple-form onsubmit=(action "submit" model) class="button delete edit-btn" as |formValues|}}
+  {{input class="title-input" value= model.title}}
+  <button class="submit">Submit</button>
+{{/simple-form}}
 </div>
 
 <div class="button-container">
   <div class="box">
-    {{#simple-form onsubmit=(action "submit" model) class="button delete edit-btn" as |formValues|}}
       <input value={{model.title}}>
-      <button class="submit">Submit</button>
-    {{/simple-form}}
+
     {{!-- {{#link-to "todo-groups.index" todoGroup.id class="submit-btn"}}
     Submit{{/link-to}} --}}
   </div>
