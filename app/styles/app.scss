@@ -18,14 +18,13 @@ ul {
 }
 
 .container {
-  max-width: 70%;
   width: 100%;
   margin: auto;
 }
 
 .content {
   padding: $gutter;
-  background: $brand-teal;
+  background: $tang;
 }
 
 .page-title {
@@ -43,12 +42,17 @@ ul {
   text-transform: uppercase;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .delete-btn {
   font-size: $gutter;
   text-transform: uppercase;
   border: none;
   color: $brand-white;
-  background: $brand-gray;
+  background: $red;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
@@ -57,10 +61,11 @@ ul {
   font-size: $gutter;
   text-decoration: none;
   color: $brand-white;
-  background: $brand-gray;
+  background: $blue;
+  margin-right: 0.5rem;
   padding: 0.5rem $gutter;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0;
   text-transform: uppercase;
 }
 
@@ -71,7 +76,7 @@ ul {
   background: $brand-gray;
   padding: 0.5rem $gutter;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0;
   text-transform: uppercase;
 }
 
@@ -80,6 +85,7 @@ ul {
 }
 
 .collection__item {
+  width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -87,4 +93,5 @@ ul {
   border: 1px solid $light-gray;
   margin: $gutter;
   border-radius: 0.5rem;
+  margin-left: 15%;
 }
