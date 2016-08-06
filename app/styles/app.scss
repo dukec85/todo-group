@@ -32,6 +32,14 @@ ul {
   color: $brand-white;
 }
 
+.app-title {
+  color: $brand-white;
+}
+
+.stuff {
+  margin: 0.5rem;
+}
+
 .nav__item {
   color: $brand-white;
   text-decoration: none;
@@ -59,8 +67,9 @@ ul {
   border: none;
   color: $brand-white;
   background: $red;
+  margin-right: 0.5rem;
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0rem;
 }
 
 .edit-btn {
@@ -101,3 +110,14 @@ ul {
   border-radius: 0.5rem;
   margin-left: 15%;
 }
+
+//.collection__item {
+  //width: 100%;
+  //display: flex;
+  //flex-direction: row;
+  //justify-content: space-between;
+  //align-items: center;
+  //border: 1px solid $light-gray;
+  //margin: $gutter;
+  //border-radius: 0.5rem;
+//}
