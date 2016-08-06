@@ -1,12 +1,25 @@
-{{#each model as |todoGroup|}}
-  {{#link-to "todo-groups.edit" todoGroup.id class="nav__item"}}
-    {{todoGroup.title}}
-  {{/link-to}}
-{{/each}}
+<div class="app">
+  <div class="section">
+    <div class="container">
+      <div class="content">
+        <h2 class="page-title">Todos</h2>
+        {{#link-to "todo-groups.new" class="new-btn" }}New Category{{/link-to}}
+        <nav class="nav">
+          {{#each model as |todoGroup|}}
+            {{#link-to "todo-groups.edit" todoGroup.id class="nav__item"}}
+              {{todoGroup.title}}
+            {{/link-to}}
+          {{/each}}
 
-{{#link-to "todo-groups.new" class="nav__item nav__item--new-link"}}
-  {{todoGroup.title}}
-{{/link-to}}
+          {{#link-to "todo-groups.new" class="nav__item nav__item--new-link"}}
+            {{todoGroup.title}}
+          {{/link-to}}
+        </nav>
+      </div>
 
-
-{{outlet}}
+      <div class="outer-container">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</div>

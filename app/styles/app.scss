@@ -29,6 +29,12 @@ ul {
 
 .page-title {
   text-align: center;
+  color: $brand-white;
+}
+
+.nav__item {
+  color: $brand-white;
+  text-decoration: none;
 }
 
 .new-btn {
