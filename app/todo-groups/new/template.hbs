@@ -4,8 +4,12 @@
       <h2 class="page-title">New Category</h2>
       <div class="collection__item">
         {{#simple-form onsubmit=(action "saveCategory") as |formValues|}}
+          <p class ="card-title">Title</p>
           {{input class="input title-input" value=formValues.title type="text" placeholder="Title"}}
-          <button class="submit">Save</button>
+          <div class="button-container">
+            <button class="back-btn">Back</button>
+            <button class="submit save-btn">Save</button>
+          </div>
         {{/simple-form}}
       </div>
     </div>
