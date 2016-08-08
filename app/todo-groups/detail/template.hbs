@@ -1,0 +1,26 @@
+<div class="card">
+  <h2 class="page-title">{{ model.title }}</h2>
+
+  <div class="collection__item"></div>
+
+  <div class="todo-groups">
+    {{#each model.items as |todoItem|}}
+      <div class="collection__item">
+        <div class="todo-item__name">{{todoItem.name}}</div>
+      </div>
+      {{#if todoItem.done}}
+        <span class="todo-item__done fa fa-check-square-o"></span>
+      {{else}}
+        <span class="todo-item__done fa fa-square-o"></span>
+      {{/if}}
+
+
+
+
+
+    {{/each}}
+  </div>
+
+</div>
+
+{{outlet}}
