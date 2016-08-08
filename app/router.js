@@ -8,9 +8,13 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route('todo-groups', function() {
     this.route('new');
-
     this.route('edit', { path: '/:id/edit'});
+    this.route('detail', { path: '/:id'});
+
+
   });
+
+
 });
 
 export default Router;
