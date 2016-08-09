@@ -100,8 +100,10 @@ test('user can change toggle "done" value of todo-items', function(assert) {
       'The last todo in the list should be changed from not done to done, ' +
       'and there should be a font-awesome span with a class "fa-check-square-o" to represent this');
 
-    assert.equal(item1.done, true);
-    assert.equal(item2.done, false);
+    assert.equal(item1.done, true,
+      'The changes to the "done" property on todo items should be saved to the server');
+    assert.equal(item2.done, false,
+      'The changes to the "done" property on todo items should be saved to the server');
   });
 });
 

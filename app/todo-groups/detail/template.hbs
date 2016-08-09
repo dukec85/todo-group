@@ -10,11 +10,13 @@
 
         <div class="todo-item__name">{{todoItem.name}}</div>
       </div>
-      {{#if todoItem.done}}
-        <span class="todo-item__done fa fa-check-square-o"></span>
-      {{else}}
-        <span class="todo-item__done fa fa-square-o"></span>
-      {{/if}}
+      <button class="todo-item__toggle" {{action "toggle" todoItem}}>
+        {{#if todoItem.done}}
+          <span class="todo-item__done fa fa-check-square-o"></span>
+        {{else}}
+          <span class="todo-item__done fa fa-square-o"></span>
+        {{/if}}
+      </button>
 
       {{/each}}
   </div>

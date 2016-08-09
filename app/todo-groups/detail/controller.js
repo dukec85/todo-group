@@ -5,6 +5,10 @@ export default Ember.Controller.extend({
     destroy(value){
       value.destroyRecord();
     },
+    toggle(todoItem) {
+      todoItem.toggleProperty('done');
+      todoItem.save();
+    },
     editSubmit(group, formValues){
 
       group.setProperties(formValues);
