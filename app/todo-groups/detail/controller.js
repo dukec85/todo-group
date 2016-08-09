@@ -9,13 +9,8 @@ export default Ember.Controller.extend({
       todoItem.toggleProperty('done');
       todoItem.save();
     },
-    editSubmit(group, formValues){
-
-      group.setProperties(formValues);
-      group.save().then(() => {
-
-      this.transitionToRoute('todo-group.index');
-    });
+    delete(todoItem) {
+      todoItem.destroyRecord();
+    }
   }
-}
 });
