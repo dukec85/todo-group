@@ -17,8 +17,13 @@ ul {
   margin-left: 0;
 }
 
+.section {
+  padding: 1rem;
+}
+
 .container {
   width: 100%;
+  max-width: 60rem;
   margin: auto;
 }
 
@@ -27,17 +32,8 @@ ul {
   background: $tang;
 }
 
-.page-title {
-  text-align: center;
-  color: $brand-white;
-}
-
 .app-title {
   color: $brand-white;
-}
-
-.stuff {
-  margin: 0.5rem;
 }
 
 .nav__item {
@@ -100,25 +96,18 @@ ul {
 }
 
 .collection__item {
-  width: 90%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+
   align-items: center;
+  justify-content: space-between;
+
+  margin: $gutter 0;
+
   border: 1px solid $light-gray;
-  margin: $gutter;
-  border-radius: 0;
-  margin-left: 5%;
 }
 
 .top-stuff {
-  width: 90%;
   display: flex;
   justify-content: space-between;
-  margin-left: 5%;
-}
-
-.cat {
-  color: $brand-black;
-  margin: 0;
+  align-items: center;
 }
