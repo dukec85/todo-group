@@ -5,11 +5,9 @@
       <h2 class="page-title">Categories</h2>
 
       <div class="outer-container">
-<div class="top-stuff">
-  <h2 class="cat">Categories</h2>
-  {{#link-to "todo-groups.new" class="new-btn cat" }}Add New Category{{/link-to}}
-  </div>
-  <div class="todo-groups">
+<div class="top-stuff"><h2 class="cat">Categories</h2>
+  {{#link-to "todo-groups.new" class="new-btn" }}Add New Category{{/link-to}}
+  </div>        <div class="todo-groups">
           {{#each model as |todoGroup|}}
             <div class="collection__item">
               <div class="box">

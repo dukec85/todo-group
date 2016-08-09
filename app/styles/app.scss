@@ -54,7 +54,6 @@ ul {
   border: none;
   border-radius: 0;
   text-transform: uppercase;
-  margin-left: 15%;
 }
 
 .button-container {
@@ -108,22 +107,17 @@ ul {
   align-items: center;
   border: 1px solid $light-gray;
   margin: $gutter;
-  border-radius: 0.5rem;
+  border-radius: 0;
+  margin-left: 15%;
+}
+
+.top-stuff {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
   margin-left: 15%;
 }
 
 .cat {
-  display: inline-block;
-  margin-left: 15%;
+  color: $brand-black;
 }
-
-//.collection__item {
-  //width: 100%;
-  //display: flex;
-  //flex-direction: row;
-  //justify-content: space-between;
-  //align-items: center;
-  //border: 1px solid $light-gray;
-  //margin: $gutter;
-  //border-radius: 0.5rem;
-//}
