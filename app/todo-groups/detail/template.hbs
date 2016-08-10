@@ -31,7 +31,7 @@
     {{/each}}
 
   {{#simple-form onsubmit=(action "addTodoItem" model) as |todoItem|}}
-    {{input type="text" class="input todo-item__name"}}
+    {{input type="text" value=formValues.name class="input todo-item__name"}}
       <button class ="submit">Add</button>
   {{/simple-form}}
 

@@ -12,9 +12,13 @@ Router.map(function() {
     this.route('detail', { path: '/:id'});
 
 
+    this.route('todo-group');
   });
 
 
+  this.route('todo-group', function() {
+    this.route('detail');
+  });
 });
 
 export default Router;
