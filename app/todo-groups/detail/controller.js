@@ -11,6 +11,12 @@ export default Ember.Controller.extend({
     },
     delete(todoItem) {
       todoItem.destroyRecord();
-    }
-  }
+    },
+      addTodoItem(todoGroups, formValues, reset) {
+        const storeItem = this.store.createRecord('todo-item', formValues);
+        storeItem.set('group', todoGroups);
+        storeItem.save();
+        reset();
+      },
+    },
 });

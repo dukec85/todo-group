@@ -4,6 +4,12 @@
 
     <div class="collection__item"></div>
 
+    <div class="todo-item-name">
+
+    </div>
+
+
+
     <div class="todo-groups">
     {{#each model.items as |todoItem|}}
       <div class="collection__item">
@@ -22,7 +28,13 @@
       Delete
     </button>
 
-      {{/each}}
+    {{/each}}
+
+  {{#simple-form onsubmit=(action "addTodoItem" model) as |todoItem|}}
+    {{input type="text" class="input todo-item__name"}}
+      <button class ="submit">Add</button>
+  {{/simple-form}}
+
   </div>
 </div>
 
