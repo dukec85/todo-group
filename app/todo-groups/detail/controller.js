@@ -17,7 +17,6 @@ export default Ember.Controller.extend({
         storeItem.set('group', todoGroups);
         storeItem.save();
         reset();
-        ;
       },
     },
 });

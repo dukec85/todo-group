@@ -57,6 +57,11 @@ ul {
   flex-direction: row-reverse;
 }
 
+.button-container__new {
+  display: flex;
+  justify-content: space-between;
+}
+
 .delete-btn {
   font-size: $gutter;
   text-transform: uppercase;
@@ -89,6 +94,15 @@ ul {
   border: none;
   border-radius: 0;
   text-transform: uppercase;
+}
+
+.back-btn {
+  color: $brand_white;
+  background: $light-gray;
+}
+
+.save-btn {
+  background: $tang;
 }
 
 .todo-group__title {
