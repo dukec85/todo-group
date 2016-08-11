@@ -1,0 +1,29 @@
+<div class="section">
+  <div class="container">
+    <div class="content">
+      <h2 class="page-title">Editing {{model.title}}</h2>
+      {{#link-to "todo-groups.new" class="edit-btn" }}Edit{{/link-to}}
+    </div>
+  </div>
+</div>
+
+<div class="box">
+  {{#simple-form onsubmit=(action "submit" model) class="button delete edit-btn" as |formValues|}}
+  {{input class="title-input" value= model.title}}
+  <button class="submit">Submit</button>
+{{/simple-form}}
+</div>
+
+<div class="button-container">
+  <div class="box">
+      <input value={{model.title}}>
+
+    {{!-- {{#link-to "todo-groups.index" todoGroup.id class="submit-btn"}}
+    Submit{{/link-to}} --}}
+  </div>
+</div>
+
+
+
+
+{{outlet}}

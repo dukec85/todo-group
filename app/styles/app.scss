@@ -1,0 +1,127 @@
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+
+@import 'box-sizing';
+@import 'variables';
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  color: $brand-gray;
+  overflow: auto;
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+.section {
+  padding: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 60rem;
+  margin: auto;
+}
+
+.content {
+  padding: $gutter;
+  background: $tang;
+}
+
+.app-title {
+  color: $brand-white;
+}
+
+.nav__item {
+  color: $brand-white;
+  text-decoration: none;
+}
+
+.new-btn {
+  font-size: $gutter;
+  text-decoration: none;
+  color: $brand-white;
+  background: $green;
+  padding: 0.5rem $gutter;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.button-container__new {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-btn {
+  font-size: $gutter;
+  text-transform: uppercase;
+  border: none;
+  color: $brand-white;
+  background: $red;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0rem;
+}
+
+.edit-btn {
+  font-size: $gutter;
+  text-decoration: none;
+  color: $brand-white;
+  background: $blue;
+  margin-right: 0.5rem;
+  padding: 0.5rem $gutter;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.submit {
+  font-size: $gutter;
+  text-decoration: none;
+  color: $brand-white;
+  background: $brand-gray;
+  padding: 0.5rem $gutter;
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.back-btn {
+  color: $brand_white;
+  background: $light-gray;
+}
+
+.save-btn {
+  background: $tang;
+}
+
+.todo-group__title {
+  margin: $gutter;
+}
+
+.collection__item {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: $gutter 0;
+
+  border: 1px solid $light-gray;
+}
+
+.top-stuff {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

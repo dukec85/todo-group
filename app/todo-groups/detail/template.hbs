@@ -1,0 +1,34 @@
+<div class="card">
+  <h2 class="page-title">{{ model.title }}</h2>
+
+  <div class="todo-groups">
+    {{#each model.items as |todoItem|}}
+      <div class="collection__item">
+
+        <div class="todo-item__name">{{todoItem.name}}</div>
+      </div>
+      <button class="todo-item__toggle" {{action "toggle" todoItem}}>
+        {{#if todoItem.done}}
+          <span class="todo-item__done fa fa-check-square-o"></span>
+        {{else}}
+          <span class="todo-item__done fa fa-square-o"></span>
+        {{/if}}
+      </button>
+
+      <button class="delete-btn" {{action "delete" todoItem}}>
+        Delete
+      </button>
+
+    {{/each}}
+
+    <div class="collection__item">
+      {{#simple-form onsubmit=(action "addTodoItem" model) as |formValues|}}
+        {{input type="text" value=formValues.name class="input todo-item-name"}}
+        <button class="submit">Add</button>
+      {{/simple-form}}
+    </div>
+
+  </div>
+</div>
+
+{{outlet}}
